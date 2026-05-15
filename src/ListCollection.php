@@ -6,6 +6,7 @@ namespace dhy\LaravelList;
 
 use BadMethodCallException;
 use Closure;
+use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
@@ -16,7 +17,7 @@ use Illuminate\Support\Collection;
  */
 class ListCollection extends Collection
 {
-    /** @param  \Illuminate\Contracts\Support\Arrayable<array-key, TValue>|iterable<array-key, TValue>|null  $items */
+    /** @param  Arrayable<array-key, TValue>|iterable<array-key, TValue>|null  $items */
     public function __construct($items = [])
     {
         parent::__construct($items);
